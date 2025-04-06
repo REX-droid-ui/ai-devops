@@ -14,8 +14,6 @@ A lightweight DevOps pipeline for deploying a pre-trained sentiment analysis mod
 - 🔧 Simple, reproducible setup for local and cloud-based environments  
 - 💡 Beginner-friendly DevOps + AI example  
 
----
-
 ## 📦 What's Inside?
 
 - `app/`: Python scripts including `main.py` and saved `.pkl` model/vectorizer  
@@ -23,16 +21,12 @@ A lightweight DevOps pipeline for deploying a pre-trained sentiment analysis mod
 - `Dockerfile`: Builds the image and runs training during build  
 - `.github/workflows/`: GitHub Actions workflow for CI/CD  
 
----
-
 ## 🛠 Setup Instructions
 
 ### ✅ Prerequisites (All Platforms)
 
 - [Docker](https://www.docker.com/products/docker-desktop/) installed and running  
 - [Git](https://git-scm.com/downloads) installed (optional but recommended)  
-
----
 
 ### 🪟 Windows
 
@@ -43,7 +37,6 @@ cd ai-devops
 docker build -t sentiment-app .
 docker run -it sentiment-app
 ```
----
 
 ### 🍎 macOS
 
@@ -54,7 +47,6 @@ cd ai-devops
 docker build -t sentiment-app .
 docker run -it sentiment-app
 ```
----
 
 ### 🐧 Linux
 
@@ -65,7 +57,6 @@ cd ai-devops
 docker build -t sentiment-app .
 docker run -it sentiment-app
 ```
----
 
 ## 🧪 Example Usage
 
@@ -77,7 +68,6 @@ docker run -it sentiment-app
 Enter text to analyze: This is amazing
 Sentiment: Positive
 ```
----
 
 ## 🗒️ Note
 📌 The .pkl files — model.pkl and vectorizer.pkl — are created at build time by train_model.py.They live inside the Docker container image, so they do not appear in your local file explorer but they exist in /app/ once the container runs. You can confirm this by running:
@@ -86,7 +76,6 @@ Sentiment: Positive
 docker run -it --entrypoint /bin/bash sentiment-app
 ls /app
 ```
----
 
 ## 📤 Docker Hub (Public Image)
 Anyone can pull and run the image without building it locally:
@@ -95,7 +84,6 @@ Anyone can pull and run the image without building it locally:
 docker pull rexdroid/sentiment-app
 docker run -it rexdroid/sentiment-app
 ```
----
 
 ## 🙌 Contributions
 Pull requests and suggestions are welcome!
