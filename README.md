@@ -1,10 +1,21 @@
-# ai-devops
-A lightweight DevOps pipeline for deploying a pre-trained sentiment analysis model. This project demonstrates containerization with Docker and automated CI/CD using GitHub Actions to build and push the application to Docker Hub. Built with Python and scikit-learn, it’s a beginner-friendly example of integrating DevOps practices with AI deployment.
-# Key Features:
+# 🧠 ai-devops
+A lightweight DevOps pipeline for deploying a pre-trained sentiment analysis model. This project showcases containerization with Docker and automated CI/CD using GitHub Actions to build and push the application to Docker Hub. Built with Python and scikit-learn, it’s perfect for beginners learning how to integrate DevOps practices into AI workflows.
 
-Dockerized sentiment analysis app
-Automated build and deployment via GitHub Actions
-Simple, reproducible setup for learning DevOps and AI
-Usage:
+# 🚀 Key Features
+🐳 Dockerized sentiment analysis app
 
-Clone the repo, build the Docker image, and run locally—or let GitHub Actions handle deployment to Docker Hub. See README.md for setup instructions.
+🔁 Continuous integration & deployment via GitHub Actions
+
+🔧 Simple, reproducible setup for local and cloud-based environments
+
+💡 Beginner-friendly DevOps + AI example
+
+# 📦 What's Inside?
+app/: Python scripts including main.py and saved .pkl model/vectorizer
+
+train_model.py: Script to train the sentiment model
+
+Dockerfile: Builds the image and runs training during build
+
+.github/workflows/: GitHub Actions workflow for CI/CD
+
