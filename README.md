@@ -5,7 +5,6 @@
 
 A lightweight DevOps pipeline for deploying a pre-trained sentiment analysis model. This project showcases containerization with Docker and automated CI/CD using GitHub Actions to build and push the application to Docker Hub. Built with Python and scikit-learn, it’s perfect for beginners learning how to integrate DevOps practices into AI workflows.
 
-
 ## 🚀 Key Features
 
 - 🐳 Dockerized sentiment analysis app  
@@ -57,6 +56,15 @@ docker build -t sentiment-app .
 docker run -it sentiment-app
 ```
 
+
+## 📤 Docker Hub (Public Image)
+Anyone can pull and run the image without building it locally:
+
+```bash
+docker pull rexdroid/sentiment-app
+docker run -it rexdroid/sentiment-app
+```
+
 ## 🧪 Example Usage
 
 ```bash
@@ -74,14 +82,6 @@ Sentiment: Positive
 ```bash
 docker run -it --entrypoint /bin/bash sentiment-app
 ls /app
-```
-
-## 📤 Docker Hub (Public Image)
-Anyone can pull and run the image without building it locally:
-
-```bash
-docker pull rexdroid/sentiment-app
-docker run -it rexdroid/sentiment-app
 ```
 
 ## 🙌 Contributions
