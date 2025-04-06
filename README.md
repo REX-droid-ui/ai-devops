@@ -43,7 +43,7 @@ cd ai-devops
 
 docker build -t sentiment-app .
 docker run -it sentiment-app
-
+```
 ---
 
 ### 🍎 macOS
@@ -54,7 +54,7 @@ cd ai-devops
 
 docker build -t sentiment-app .
 docker run -it sentiment-app
-
+```
 ---
 
 ### 🐧 Linux
@@ -65,3 +65,4 @@ cd ai-devops
 
 docker build -t sentiment-app .
 docker run -it sentiment-app
+```
