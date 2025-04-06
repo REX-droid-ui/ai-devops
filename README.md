@@ -1,11 +1,10 @@
 # 🧠 ai-devops
 
-[![CI](https://github.com/REX-droid-ui/ai-devops/actions/workflows/docker-image.yml/badge.svg)](https://github.com/REX-droid-ui/ai-devops/actions)
+[![Docker Build Status](https://github.com/REX-droid-ui/ai-devops/actions/workflows/docker-image.yml/badge.svg)](https://github.com/REX-droid-ui/ai-devops/actions)
 [![Docker Image](https://img.shields.io/docker/pulls/rexdroid/sentiment-app.svg?style=flat&logo=docker)](https://hub.docker.com/r/rexdroid/sentiment-app)
 
 A lightweight DevOps pipeline for deploying a pre-trained sentiment analysis model. This project showcases containerization with Docker and automated CI/CD using GitHub Actions to build and push the application to Docker Hub. Built with Python and scikit-learn, it’s perfect for beginners learning how to integrate DevOps practices into AI workflows.
 
----
 
 ## 🚀 Key Features
 
