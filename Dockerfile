@@ -1,13 +1,12 @@
-FROM python:3.9-slim
+FROM python:3.10-slim
 
 WORKDIR /app
 
+COPY app/ app/
 COPY requirements.txt .
+COPY app/sentiment_model.pkl app/
+
+
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY app/ ./app/
-COPY train_model.py .
-
-RUN python train_model.py
-
-CMD ["python", "app/main.py"]
+ENTRYPOINT ["python", "app/main.py"]
