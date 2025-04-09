@@ -23,8 +23,6 @@ The model is a **Pipeline**:
 
 Trained on the [IMDB 50K Movie Reviews dataset](https://www.kaggle.com/datasets/lakshmi25npathi/imdb-dataset-of-50k-movie-reviews).
 
----
-
 ## 🐳 Docker Instructions
 
 ### 🏗️ Build the Docker image:
@@ -39,14 +37,10 @@ docker run -it --rm sentiment-app
 
 > You will be prompted to enter a review, and it will return the sentiment (Positive/Negative).
 
----
-
 ## 🤖 GitHub Actions (CI/CD)
 
 - Automatically builds and checks your app on every push to `main`.
 - Define your workflow in `.github/workflows/ci.yml`.
-
----
 
 ## ✅ Requirements
 
@@ -56,8 +50,6 @@ For local development (without Docker):
 pip install -r requirements.txt
 ```
 
----
-
 ## 📌 Example
 
 ```text
@@ -65,13 +57,9 @@ Enter a movie review: The plot was amazing and I loved the characters!
 Predicted Sentiment: Positive 👍
 ```
 
----
-
 ## ⚠️ Note on Large Files
 
 The dataset (`IMDB Dataset.csv`) is over 60 MB. Consider using [Git LFS](https://git-lfs.github.com/) to manage large files if you plan on frequent changes.
-
----
 
 ## 👤 Author
 
