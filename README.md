@@ -1,96 +1,85 @@
-# 🧠 ai-devops
+
+# ai-devops 🚀
 
 [![Docker Build Status](https://github.com/REX-droid-ui/ai-devops/actions/workflows/docker-image.yml/badge.svg)](https://github.com/REX-droid-ui/ai-devops/actions)
 [![Docker Image](https://img.shields.io/docker/pulls/rexdroid/sentiment-app.svg?style=flat&logo=docker)](https://hub.docker.com/r/rexdroid/sentiment-app)
 
-A lightweight DevOps pipeline for deploying a pre-trained sentiment analysis model. This project showcases containerization with Docker and automated CI/CD using GitHub Actions to build and push the application to Docker Hub. Built with Python and scikit-learn, it’s perfect for beginners learning how to integrate DevOps practices into AI workflows.
+A simple and production-ready **Sentiment Analysis Web App** powered by **Machine Learning**, built with **Python**, **scikit-learn**, and packaged using **Docker**. This project also includes **CI/CD integration with GitHub Actions** for seamless development workflows.
 
-## 🚀 Key Features
+## 🔍 Features
 
-- 🐳 Dockerized sentiment analysis app  
-- 🔁 Continuous integration & deployment via GitHub Actions  
-- 🔧 Simple, reproducible setup for local and cloud-based environments  
-- 💡 Beginner-friendly DevOps + AI example  
+- ✅ IMDB 50K movie reviews dataset used for model training  
+- ✅ Sentiment analysis using a Logistic Regression pipeline  
+- ✅ Command-line interactive text input  
+- ✅ Pre-trained model stored and used in Dockerized app  
+- ✅ GitHub Actions CI/CD pipeline (build & test)  
+- ✅ Lightweight and portable via Docker  
 
-## 📦 What's Inside?
+## 🧠 Model Info
 
-- `app/`: Python scripts including `main.py` and saved `.pkl` model/vectorizer  
-- `train_model.py`: Script to train the sentiment model  
-- `Dockerfile`: Builds the image and runs training during build  
-- `.github/workflows/`: GitHub Actions workflow for CI/CD  
+The model is a **Pipeline**:
+- `TfidfVectorizer`: Text vectorization  
+- `LogisticRegression`: Classification into positive/negative sentiment  
 
-## 🛠 Setup Instructions
+Trained on the [IMDB 50K Movie Reviews dataset](https://www.kaggle.com/datasets/lakshmi25npathi/imdb-dataset-of-50k-movie-reviews).
 
-### ✅ Prerequisites (All Platforms)
+---
 
-- [Docker](https://www.docker.com/products/docker-desktop/) installed and running  
-- [Git](https://git-scm.com/downloads) installed (optional but recommended)  
+## 🐳 Docker Instructions
 
-### 🪟 Windows
-
+### 🏗️ Build the Docker image:
 ```bash
-git clone https://github.com/your-username/ai-devops.git
-cd ai-devops
-
 docker build -t sentiment-app .
-docker run -it sentiment-app
 ```
 
-### 🍎 macOS
+### 🚀 Run the sentiment app:
+```bash
+docker run -it --rm sentiment-app
+```
+
+> You will be prompted to enter a review, and it will return the sentiment (Positive/Negative).
+
+---
+
+## 🤖 GitHub Actions (CI/CD)
+
+- Automatically builds and checks your app on every push to `main`.
+- Define your workflow in `.github/workflows/ci.yml`.
+
+---
+
+## ✅ Requirements
+
+For local development (without Docker):
 
 ```bash
-git clone https://github.com/your-username/ai-devops.git
-cd ai-devops
-
-docker build -t sentiment-app .
-docker run -it sentiment-app
+pip install -r requirements.txt
 ```
 
-### 🐧 Linux
+---
 
-```bash
-git clone https://github.com/your-username/ai-devops.git
-cd ai-devops
+## 📌 Example
 
-docker build -t sentiment-app .
-docker run -it sentiment-app
+```text
+Enter a movie review: The plot was amazing and I loved the characters!
+Predicted Sentiment: Positive 👍
 ```
 
+---
 
-## 📤 Docker Hub (Public Image)
-Anyone can pull and run the image without building it locally:
+## ⚠️ Note on Large Files
 
-```bash
-docker pull rexdroid/sentiment-app
-docker run -it rexdroid/sentiment-app
-```
+The dataset (`IMDB Dataset.csv`) is over 60 MB. Consider using [Git LFS](https://git-lfs.github.com/) to manage large files if you plan on frequent changes.
 
-## 🧪 Example Usage
+---
 
-```bash
-docker run -it sentiment-app
-```
+## 👤 Author
 
-```vbnet
-Enter text to analyze: This is amazing
-Sentiment: Positive
-```
+**REX-droid-ui**  
+GitHub: [@REX-droid-ui](https://github.com/REX-droid-ui)
 
-## 🗒️ Note
-📌 The .pkl files — model.pkl and vectorizer.pkl — are created at build time by train_model.py.They live inside the Docker container image, so they do not appear in your local file explorer but they exist in /app/ once the container runs. You can confirm this by running:
+---
 
-```bash
-docker run -it --entrypoint /bin/bash sentiment-app
-ls /app
-```
+## 📄 License
 
-## 🙌 Contributions
-Pull requests and suggestions are welcome!
-Feel free to fork, star ⭐, or open issues for improvements.
-
-
-
-
-
-
-
+MIT License
