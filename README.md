@@ -37,11 +37,6 @@ docker run -it --rm sentiment-app
 
 > You will be prompted to enter a review, and it will return the sentiment (Positive/Negative).
 
-## 🤖 GitHub Actions (CI/CD)
-
-- Automatically builds and checks your app on every push to `main`.
-- Define your workflow in `.github/workflows/ci.yml`.
-
 ## ✅ Requirements
 
 For local development (without Docker):
