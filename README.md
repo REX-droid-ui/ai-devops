@@ -52,10 +52,6 @@ Enter a movie review: The plot was amazing and I loved the characters!
 Predicted Sentiment: Positive 👍
 ```
 
-## ⚠️ Note on Large Files
-
-The dataset (`IMDB Dataset.csv`) is over 60 MB. Consider using [Git LFS](https://git-lfs.github.com/) to manage large files if you plan on frequent changes.
-
 ## 👤 Author
 
 **REX-droid-ui**  
